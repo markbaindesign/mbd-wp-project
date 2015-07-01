@@ -1,0 +1,80 @@
+# =========================
+# Various
+# =========================
+node_modules
+bower_components
+.sass-cache
+import
+export
+scripts
+
+# =========================
+# VIM Temp Files
+# =========================
+*~
+*.swp
+
+# =========================
+# WordPress 
+# =========================
+
+*.log
+
+# Ignore everything in the "httpdocs" directory except the "wp-content" directory.
+httpdocs/*
+!httpdocs/wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+httpdocs/wp-content/*
+!httpdocs/wp-content/plugins/
+!httpdocs/wp-content/themes/
+!httpdocs/wp-content/mu-plugins/
+ 
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+httpdocs/wp-content/plugins/*
+# !httpdocs/wp-content/plugins/my-single-file-plugin.php
+# !httpdocs/wp-content/plugins/my-directory-plugin/
+
+# Ignore everything in the "mu-plugins" directory, except the mu-plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+httpdocs/wp-content/mu-plugins/*
+# !httpdocs/wp-content/mu-plugins/my-single-file-plugin.php
+# !httpdocs/wp-content/mu-plugins/my-directory-plugin/
+ 
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+httpdocs/wp-content/themes/*
+# !httpdocs/wp-content/themes/my-theme/
+
+# =========================
+# Operating System Files
+# =========================
+
+# Windows
+# =========================
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+*.map
+
+# Misc
+*.zip
+*.tar
+*.gz
+*.sql
+*.sublime-workspace

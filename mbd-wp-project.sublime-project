@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "root",
+			"name": "Root",
+/*			"folder_exclude_patterns": [
+				"",
+			],
+			"file_exclude_patterns":
+			[
+				""
+			]*/
+		}
+	]
+}
