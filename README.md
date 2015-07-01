@@ -22,11 +22,11 @@
 
 ### Install deploy scripts ###
 *Do not commit `config.sh`to your repo!*
-- [x] `git clone https://github.com/markbaindesign/mbd-wp-deploy-scripts.git NEW_PROJECT-NAME/scripts` 
-- [x] `cd NEW_PROJECT-NAME`
-- [x] `mkdir import`
-- [x] `mkdir export`
-- [x] `cp config-sample.sh config.sh`
+- [ ] `git clone https://github.com/markbaindesign/mbd-wp-deploy-scripts.git NEW_PROJECT-NAME/scripts` 
+- [ ] `cd NEW_PROJECT-NAME`
+- [ ] `mkdir import`
+- [ ] `mkdir export`
+- [ ] `cp config-sample.sh config.sh`
 - [ ] Edit `config.sh`with your project's environmental variables
 
 ### Git ###
