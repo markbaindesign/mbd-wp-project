@@ -1,0 +1,576 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: isolarworkx\n"
+"POT-Creation-Date: 2015-02-23 18:21+0100\n"
+"PO-Revision-Date: 2015-02-23 22:15+0100\n"
+"Last-Translator: Mark Bain <hello@markbaindesign.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;_;__;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../isolarworkx/404.php:10
+msgid "Not found"
+msgstr ""
+
+#: ../isolarworkx/archive.php:7
+msgid "Archive"
+msgstr ""
+
+#: ../isolarworkx/category.php:7
+msgid "Category Archive:"
+msgstr ""
+
+#: ../isolarworkx/comments.php:40 ../isolarworkx/comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#: ../isolarworkx/comments.php:41 ../isolarworkx/comments.php:61
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../isolarworkx/comments.php:42 ../isolarworkx/comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../isolarworkx/comments.php:74
+msgid "Sorry! Comments are now closed."
+msgstr ""
+
+#: ../isolarworkx/comments.php:89
+msgid "Leave a comment"
+msgstr ""
+
+#: ../isolarworkx/comments.php:90
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: ../isolarworkx/comments.php:91
+msgid "Cancel Reply"
+msgstr ""
+
+#: ../isolarworkx/comments.php:92
+msgid "Post Comment"
+msgstr ""
+
+#: ../isolarworkx/content-banner-latest.php:33
+msgid "Latest Post"
+msgstr ""
+
+#: ../isolarworkx/content-banner-portfolio.php:34
+msgid "Latest Case Study"
+msgstr ""
+
+#: ../isolarworkx/content-banner.php:5
+msgid "Tag Archive"
+msgstr ""
+
+#: ../isolarworkx/content-none.php:4
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../isolarworkx/content-none.php:6
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../isolarworkx/content-none.php:9
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../isolarworkx/content-none.php:13
+msgid "Edit"
+msgstr ""
+
+#: ../isolarworkx/content.php:7
+msgid "Pages:"
+msgstr ""
+
+#: ../isolarworkx/footer.php:28
+msgid "Follow us on Twitter"
+msgstr ""
+
+#: ../isolarworkx/footer.php:35
+msgid "Twitter"
+msgstr ""
+
+#: ../isolarworkx/footer.php:38
+msgid "Like us on Facebook"
+msgstr ""
+
+#: ../isolarworkx/footer.php:44
+msgid "Facebook"
+msgstr ""
+
+#: ../isolarworkx/footer.php:47
+msgid "Visit our YouTube channel"
+msgstr ""
+
+#: ../isolarworkx/footer.php:53
+msgid "YouTube"
+msgstr ""
+
+#: ../isolarworkx/footer.php:56
+msgid "We are on Instagram, too!"
+msgstr ""
+
+#: ../isolarworkx/footer.php:62
+msgid "Instagram"
+msgstr ""
+
+#: ../isolarworkx/footer.php:81
+msgid "Go back to the top"
+msgstr ""
+
+#: ../isolarworkx/header.php:54
+msgid "Menu"
+msgstr ""
+
+#: ../isolarworkx/search.php:12
+msgid "Search Results for:"
+msgstr ""
+
+#: ../isolarworkx/search.php:33
+msgid "Not found:"
+msgstr ""
+
+#: ../isolarworkx/single-portfolio_item.php:24
+msgid "<h3>Other Recent Case Studies</h3>"
+msgstr ""
+
+#: ../isolarworkx/single-portfolio_item.php:26
+msgid "See all Case Studies"
+msgstr ""
+
+#: ../isolarworkx/tag.php:7
+msgid "Tag Archive:"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:161
+#: ../isolarworkx/lib/theme-require-plugins.php:56
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:162
+#: ../isolarworkx/lib/theme-require-plugins.php:57
+msgid "Install Plugins"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:163
+#: ../isolarworkx/lib/theme-require-plugins.php:58
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:164
+msgid "Something went wrong."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:175
+#: ../isolarworkx/lib/theme-require-plugins.php:70
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:176
+msgid "Return to the dashboard"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:177
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1945
+#: ../isolarworkx/lib/theme-require-plugins.php:71
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:178
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:179
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:180
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:534
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2162
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1169
+msgid "Private Repository"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1172
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1177
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1180
+msgid "Required"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1180
+msgid "Recommended"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1183
+msgid "Not Installed"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1185
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1290
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1398
+msgid "Install"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1312
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1399
+msgid "Activate"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1361
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1377
+msgid "Plugin"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1378
+msgid "Source"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1379
+msgid "Type"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1380
+msgid "Status"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1928
+msgid "Install package not available."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1929
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1930
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1931
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1932
+msgid "Plugin install failed."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1933
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:1944
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2058
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2059
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2059
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2068
+msgid "Show Details"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2059
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2068
+msgid "Hide Details"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2060
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2061
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2065
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2066
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2068
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2069
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../isolarworkx/lib/class-tgm-plugin-activation.php:2070
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../isolarworkx/lib/init.php:45
+msgid "Primary Menu"
+msgstr ""
+
+#: ../isolarworkx/lib/theme-functions.php:15
+msgid "Sidebar"
+msgstr ""
+
+#: ../isolarworkx/lib/theme-functions.php:25
+msgid "Footer Widget Area 1"
+msgstr ""
+
+#: ../isolarworkx/lib/theme-functions.php:34
+msgid "Footer Widget Area 2"
+msgstr ""
+
+#: ../isolarworkx/lib/theme-functions.php:43
+msgid "Footer Widget Area 3"
+msgstr ""
+
+#: ../isolarworkx/lib/theme-functions.php:203
+msgid "Square x3"
+msgstr ""
+
+#: ../isolarworkx/lib/theme-functions.php:204
+msgid "Rectangle"
+msgstr ""
+
+#: ../isolarworkx/lib/theme-functions.php:205
+msgid "Letterbox"
+msgstr ""
+
+#: ../isolarworkx/lib/theme-require-plugins.php:59
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../isolarworkx/lib/theme-require-plugins.php:72
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/custom-comment.php:54
+msgid "Incoming link:"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/custom-comment.php:54
+#: ../isolarworkx/lib/inc/custom-comment.php:71
+msgid "(Edit)"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/custom-comment.php:64
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/custom-comment.php:69
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/custom-comment.php:76
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../isolarworkx/lib/inc/custom-meta.php:6
+#, php-format
+msgid ""
+"<div class=\"post-meta\"><span class=\"sep\">Posted on </span><a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\" pubdate>%4$s</time></a><span class=\"byline\"> <span class=\"sep\"> by </"
+"span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title="
+"\"%6$s\" rel=\"author\">%7$s</a></span></span></div>"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/custom-meta.php:12
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:18
+msgid "Branding"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:28
+msgid "Hero Logo"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:38
+msgid "Header Logo"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:48
+msgid "Footer Logo"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:56
+msgid "Hero Image"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:64
+msgid "Hero Background Image"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:74
+#: ../isolarworkx/lib/inc/customizer.php:103
+msgid "Layout"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:76
+msgid "Allows you to edit your theme's layout."
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:91
+msgid "Featured Content"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:107
+msgid "Grid"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:108
+msgid "Slider"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:118
+msgid "Theme layout"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:121
+msgid "Left sidebar"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:122
+msgid "Right sidebar"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:123
+msgid "No sidebar"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:149
+msgid "Contact details"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:157
+msgid "Telephone Number"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:165
+msgid "Email address"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:175
+msgid "Street address"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/customizer.php:183
+msgid "Link to map"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/extras.php:69
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/featured-content.php:311
+msgid "Featured content"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/featured-content.php:334
+msgid "Tag name:"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/featured-content.php:339
+msgid "Number of posts:"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/featured-content.php:344
+msgid "Hide tag from displaying in post meta and tag clouds."
+msgstr ""
+
+#: ../isolarworkx/lib/inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/template-tags.php:56
+msgid "Post navigation"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/template-tags.php:87
+#, php-format
+msgid ""
+"\n"
+"\t\t\n"
+"\t\t<ul><li class=\"post-author\"><label>By </label> %2$s</li>\n"
+"\t\t<li class=\"post-date\">%1$s</li></ul>"
+msgstr ""
+
+#: ../isolarworkx/lib/inc/template-tags.php:210
+#: ../isolarworkx/lib/inc/template-tags.php:262
+#: ../isolarworkx/lib/inc/template-tags.php:307
+msgid "Sorry, but there are no related posts at this time."
+msgstr "آسف ، ولكن لا توجد وظائف ذات الصلة في هذا الوقت."
+
+#~ msgid "Blog"
+#~ msgstr "بلوق"
