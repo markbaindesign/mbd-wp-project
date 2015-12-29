@@ -7,7 +7,6 @@ module.exports = function(grunt) {
     grunt.initConfig({
 			pkg: grunt.file.readJSON( 'package.json' ),
             rdm: 'README.md',
-            plg1: 'PROJECT_NAME-custom-functions',
         
 		 // watch for changes and trigger sass, jshint, uglify and livereload
         watch: {
@@ -24,15 +23,21 @@ module.exports = function(grunt) {
             },*/
             livereload: {
                 options: { livereload: true },
-                files: [ 
+                files: [
+
+                    // Gruntfile
+                    'Gruntfile.js',
+
+                    // Theme files
 				 	'httpdocs/wp-content/themes/<%= pkg.name %>/**/*.php', 
-					'httpdocs/wp-content/themes/<%= pkg.name %>/lib/**/*.php', 
-					'Gruntfile.js',
+					'httpdocs/wp-content/themes/<%= pkg.name %>/lib/**/*.php',
 					'httpdocs/wp-content/themes/<%= pkg.name %>/style.css', 
 					'httpdocs/wp-content/themes/<%= pkg.name %>/assets/js/source/**/*.js', 
 					'httpdocs/wp-content/themes/<%= pkg.name %>/assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
-                    // Watch plugins
-                    'httpdocs/wp-content/plugins/<%= plg1 %>/**/*',
+
+                    // Plugins
+                    'httpdocs/wp-content/plugins/<%= pkg.name %>-custom-functions/**/*',
+
                 ]
             }
         },
@@ -100,7 +105,7 @@ module.exports = function(grunt) {
                 options: {
                 prefix: 'Version\\:\\s'
                 },
-                src: [ 'httpdocs/wp-content/plugins/<%= plg1 %>/<%= plg1 %>.php' ],
+                src: [ 'httpdocs/wp-content/plugins/<%= pkg.name %>-custom-functions/<%= pkg.name %>-custom-functions.php' ],
            },           
 		},
 
@@ -154,11 +159,11 @@ module.exports = function(grunt) {
                 files:  [
                     // includes files within path and its sub-directories
                 {expand: true, 
-                    cwd: 'httpdocs/wp-content/plugins/<%= plg1 %>/',
+                    cwd: 'httpdocs/wp-content/plugins/<%= pkg.name %>-custom-functions/',
                     src: [
                         '**',
                     ], 
-                    dest: 'release/<%= pkg.name %>.<%= pkg.version %>/wp-content/plugins/<%= plg1 %>'},
+                    dest: 'release/<%= pkg.name %>.<%= pkg.version %>/wp-content/plugins/<%= pkg.name %>-custom-functions'},
                     ],
             },
 			font_awesome: {
@@ -191,7 +196,25 @@ module.exports = function(grunt) {
 				src: ['**/*'],
 				dest: 'wp-content/'
 			}		
-		}
+		},
+
+        // Shell
+        shell: {
+            exp: {
+                command: [
+                    'cd scripts',
+                    'sh local-export.sh',
+                    'cd ..'
+                ].join('&&')
+            },
+            imp: {
+                command: [
+                    'cd scripts',
+                    'sh local-import.sh',
+                    'cd ..'
+                ].join('&&')
+            }       
+        }
 
     });
 
@@ -215,9 +238,6 @@ module.exports = function(grunt) {
         'modernizr',
 		'copy:theme',
         'copy:plg1',
-        //'copy:plg2',
-        //'copy:plg3',
-        //'copy:plg4',
         'watch'
 	]);
 	
@@ -226,5 +246,15 @@ module.exports = function(grunt) {
 		'copy:font_awesome',
         'copy:deploy_scripts'       
 	]);	
+
+    // Export entire WP site for deployment
+    grunt.registerTask('export', [
+        'shell:exp'
+    ]); 
+
+    // Import entire WP site for local development
+    grunt.registerTask('import', [
+        'shell:imp'
+    ]); 
 
 };
