@@ -6,18 +6,14 @@
 
 ## 1. Setup
 
-- Open project directory in terminal and run `npm install` to install all grunt plugins (See [NPM])
-- Run `bower install` to download Bower components (and their dependencies) as listed in bower.js and place them in the "/assets" directory.
-- Run `grunt copyassets`to copy assets from bower_components to the theme.
+- [NPM]. Open project directory in terminal and run `npm install` to install all grunt plugins. See `package.json`for details. 
+- Run `bower install` to download Bower components (and their dependencies) to `/bower_components`. See `bower.json`for details.
+- Run `grunt copyassets`to copy assets from `/bower_components`to the appropriate theme directory. See `Gruntfile.js`for details.
 
 ## 2. Development
 
-- Run `grunt` to execute default tasks
-- Run `grunt build` to output build files to `/release`
-- Load all styles/scripts via `functions.php`and concat/uglify with a plugin
-
-### Installing and updating packages
-After running `npm install`/`bower install`, or updating packages to newer versions, run the grunt task `grunt copyassets`to update these assets across the project. 
+- Run `grunt` to compile your Sass and run the watch task. See `Gruntfile.js`for details.
+- Run `grunt build` to output build files to `/release`. See `Gruntfile.js`for details.
 
 ## 3. Deployment
 
@@ -30,6 +26,7 @@ This project comes with a set of shell scripts to aid with deployment. These scr
 
 ### Replacing URLs
 
-Once you have run the import script, you need to change all the URLs in the database. I suggest using this script: 
+Once you have run the import script, you need to change all the URLs in the database. I suggest using [interconnectit/Search-Replace-DB]. 
 
 [NPM]: https://www.npmjs.com/
+[interconnectit/Search-Replace-DB]: https://github.com/interconnectit/Search-Replace-DB
