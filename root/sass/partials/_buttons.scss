@@ -1,0 +1,64 @@
+// Buttons can be:
+// 1. an anchor, 
+// 2. a submit input,
+// 3. a reset input,
+// 4. or a HTML5 button.
+
+button, 
+a.button,
+input[type=submit],
+input[type=reset] {
+	padding: $input-padding;
+	@include border-radius( $button-border-radius );
+	display: inline-block !important;
+	text-align: center;
+	color: $color_button;	
+	background: $color_background-button;
+	text-decoration: none;
+	border-bottom: none;
+	@include transition(all, 0.3s, ease-in-out);	
+	&:link, &:visited {
+		color: $color_button-hover;	
+		background: $color_background-button-hover;
+		@include transition(all, 0.3s, ease-in-out);
+	}
+	&:hover {
+		color: $color_button-hover;	
+		background: $color_background-button-hover;
+		@include transition(all, 0.3s, ease-in-out);
+	}
+	&:active {
+		color: $color_button-active;	
+		background: $color_background-button-active;
+		@include transition(all, 0.3s, ease-in-out);	
+	}
+
+	// A wide-ass button
+	&.btn {
+		&--wide {
+			padding-left: 5em;
+			padding-right: 5em;
+		}
+		&--important {
+			color: $color_button_important;	
+			background: $color_background-button_important;
+			&:link, &:visited {
+				color: $color_button_important;	
+				background: $color_background-button_important;
+			}
+			&:hover {
+				color: $color_button-hover_important;	
+				background: $color_background-button-hover_important;
+			}
+			&:active {
+				color: $color_button-active_important;	
+				background: $color_background-button-active_important;
+			}
+			&:focus {
+				color: $color_button-focus_important;	
+				background: $color_background-button-focus_important;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,113 @@
+#hero {
+
+	h1 {
+		color: $cerulean;
+		text-shadow: 3px 1px 1px rgba(255,255,255,.5);
+		margin-bottom: 0;
+	}
+	@include breakpoint( max-width 768px ) { // We need to target small devices
+		&[style] { // https://css-tricks.com/override-inline-styles-with-css/
+			background-image: none !important;
+		}
+	}
+	@include breakpoint( $tablet ){
+		height: 600px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center ;
+		background-image: url('../images/main/hero-woman-yellow.png');
+		@include add-grid( $grid );
+		@include add-gutter( $gutter );
+		@include sgs-change('output', 'float');
+	} 
+
+	.container {
+		padding-top: 0;
+		background: transparent;
+		@include breakpoint($tablet) {
+			padding-top: 2rem;
+		}
+		.content {		
+			display: block;
+			@include breakpoint( $tablet ) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				height: 100%;
+			}
+			span { // Contains the content 
+				@include breakpoint( $tablet ) {
+					height: 100%;
+				}
+			}
+			h1 {
+				@extend %padded-multiline;
+				line-height: 1.8;
+			}			
+		}
+	}
+
+	.media-object {
+		@include breakpoint( $tablet ) {
+			@include grid-span(12, 13);
+		}		
+	}
+
+	.hero-image {
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		@include breakpoint( $tablet ) {
+			display: none;
+		}
+
+	}
+	.hero-text {
+
+		padding-top: 1em;
+		@include breakpoint( $tablet ) {
+			width: 50%;
+			margin: 0 auto;
+			
+		}
+
+	}
+
+	a {
+		border-bottom: none;
+	}
+	h1 {padding: 0;}
+}
+
+// Modifications to the basic hero module for the home page
+
+.home .hero {
+
+	// Headers & typography
+
+
+
+	.hero-cta {
+				a {
+					padding: 1em; // Extra pad for bigness!
+				}
+		@include clearfix;
+		@include breakpoint($mobile-horizontal){
+			margin-bottom: 1em;
+		}
+		@include breakpoint($tablet){
+			margin-bottom: 2em;
+		}
+
+	}
+	#lead {
+		@include breakpoint($tablet){
+			margin-bottom: 2em;
+		}
+	}
+}
+
+
+

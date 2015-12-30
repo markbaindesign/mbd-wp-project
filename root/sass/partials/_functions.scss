@@ -1,0 +1,4 @@
+@function font-boost($boost) {
+	// A formula to multiply the font size by a varible
+  	@return $boost * $base-font-size;
+}

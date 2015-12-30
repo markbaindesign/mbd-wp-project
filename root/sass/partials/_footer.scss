@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+	text-align: center;
+	color: $white;
+	.container {
+		@include breakpoint( $mobile-horizontal ) {
+			@include add-grid(24);
+			@include sgs-change('output', 'isolation');
+		}
+	}
+	&#widget-area {
+		background-color: $wet_asphalt;
+		ul {
+			@extend %no-bullets;
+		}
+		.widget {
+			background-color: transparent;
+			border: none;
+			&:nth-of-type(3n+1) {
+				@include grid-span(8, 1);
+			}
+			&:nth-of-type(3n+2) {
+				@include grid-span(8, 9);
+			}
+			&:nth-of-type(3n+3) {
+				@include grid-span(8, 17);
+			}
+			a {
+				display: inline;
+				border-bottom: none;
+				text-decoration: none;
+				color: $white;
+				@include transition(all, 0.3s, ease-in-out);
+				&:link {
+					color: $white;
+					@include transition(all, 0.3s, ease-in-out);
+				}
+				&:visited {
+					color: $white;
+					@include transition(all, 0.3s, ease-in-out);
+				}
+				&:hover {
+					color: $white;
+					border-bottom: 1px solid $white;
+					@include transition(all, 0.3s, ease-in-out);
+				}
+			}
+		}
+	}
+	&#colophon {
+		background-color: $midnight_blue;
+
+	}
+	
+
+	
+}
+
+#footer-widgets {
+	aside {
+		padding: 1%;
+	}
+}
+
+#back-to-top {
+	margin-bottom: 1rem;
+	font-size: ms(2); 
+	i::before {
+		content: '\f176';
+	}
+	
+	a {
+		border-bottom: none;
+	}
+	@include breakpoint( $tablet ){	
+		@include grid-span(8, 17);
+		text-align: right;
+		margin-bottom: 0;
+	}
+}
+
+.site-info {
+	margin-bottom: 1rem;
+	@extend .font_small !optional;
+	@include breakpoint( $tablet ){	
+		@include grid-span(12, 1);
+		text-align: left;
+		margin-bottom: 0;
+		line-height: 48px,
+	}
+
+	a {
+		border-bottom: none;
+	}
+}
+
+#copyright {
+	margin-bottom: 10px;
+}
+
+#signup {
+	
+	h2 {
+		margin-top: .5em;
+		i {
+			&.fa-envelope {
+				display: block;
+				@include breakpoint( $tablet ) {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+#footer-navigation {
+	background-color: $grey;
+	.menu {
+		@include center-block;
+		text-align: center;
+	}
+}
+
+// Footer 
+.site-footer {
+	.social {
+		margin-bottom: 1rem;
+		@include breakpoint( $tablet ){	
+			@include grid-span(12, 13);
+			text-align: right;
+			margin-bottom: 0;
+			font-size: 1rem;
+		}
+		ul {
+			text-align: center;
+			@include breakpoint( $tablet ) {
+				text-align: right;
+			}
+		}
+	}
+}

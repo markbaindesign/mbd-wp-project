@@ -1,0 +1,15 @@
+// Icons
+
+img {
+	&.icon {
+		@include border-radius( 50% );
+		&.icon-small { width: $icon-width-small; height: $icon-width-small;}
+		&.icon-medium { width: $icon-width-medium; height: $icon-width-medium;}
+		&.icon-large { width: $icon-width-large; height: $icon-width-large;}
+	}
+}
+
+// SVG icons
+.si-icon svg path {
+	stroke: $black;
+}

@@ -1,0 +1,164 @@
+// Color schemes
+
+@mixin palette-0 {
+	$bg:  $white;
+	background: $bg;	
+	color:  $black;
+	&::before {
+		background: darken($bg,3%);
+	}
+	a {
+		&:link, &:visited {
+			color:  $black;
+
+		}
+		&:hover {
+
+		}
+		&:active {
+
+		}
+	}
+}
+
+@mixin palette-one {
+	// vars
+	$bg: $cerulean;
+	$color: $white;
+
+	background: $bg;	
+	color: $color;
+	&::before {
+		background: darken($bg,3%);
+	}
+	a {
+		&:link, &:visited {
+			color: $color;
+
+		}
+		&:hover {
+
+		}
+		&:active {
+
+		}
+	}
+	.h1, .h2, .h3 {
+		color:  $white;
+	}
+	.media-object {
+		color: $black;
+		background-color: $white;
+		.h1, .h2, .h3 {
+			color:  $black;
+		}
+		a {
+			&:link, &:visited {
+				color: $color_text-anchor;
+			}
+		}
+	}
+}
+
+@mixin palette-4 {
+	// vars
+	$bg: $color_victoria-1;
+	$color: $color_cape-palliser;
+
+	background: $bg;	
+	color: $color;
+	&::before {
+		background: darken($bg,3%);
+	}
+	a {
+		&:link, &:visited {
+			color: $color;
+
+		}
+		&:hover {
+
+		}
+		&:active {
+
+		}
+	}
+	h1,h2,h3 {
+		color:  $white;
+	}
+}
+
+@mixin palette-3 {
+	// vars
+	$bg: $color_falcon;
+	$color: $color_cape-palliser;
+
+	background: $bg;	
+	color: $color;
+	&::before {
+		background: darken($bg,3%);
+	}
+	a {
+		&:link, &:visited {
+			color: $color;
+
+		}
+		&:hover {
+
+		}
+		&:active {
+
+		}
+	}
+	h1,h2,h3 {
+		color:  $white;
+	}
+	.button {
+		background-color: adjust_hue($bg, 100);
+	}
+}
+
+@mixin palette-5 {
+	// vars
+	$bg: $color_victoria-2;
+	$color: $color_cape-palliser;
+	$button-bg: adjust_hue($bg, 100);
+
+	background: $bg;	
+	color: $color;
+	&::before {
+		background: darken($bg,3%);
+	}
+	a {
+		&:link, &:visited {
+			color: $color;
+
+		}
+		&:hover {
+
+		}
+		&:active {
+
+		}
+	}
+	h1,h2,h3 {
+		color:  $white;
+		text-shadow: 1px 1px 1px darken( $bg, 15%); 
+	}
+	.button {
+		background-color: $button-bg;
+		color:  $white;
+		
+		&:link, &:visited {
+			color:  $white;
+		}
+
+
+		&:hover {
+			background-color: darken( $bg, 15%);
+		}
+
+		&:active {
+
+		}
+	}
+}

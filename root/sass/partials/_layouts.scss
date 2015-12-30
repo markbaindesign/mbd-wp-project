@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+html, 
+body {
+	min-height: 100%; 
+
+}
+
+main {
+	text-align: center;
+	@include breakpoint( $mobile ) {
+		text-align: left;
+	}
+}
+
+.section {
+	width: 100%;
+	padding: $section-padding;
+
+	.container {
+		position: relative; // Allow absolute positioning of elements
+		max-width: $container-width;
+		margin: 0 auto; // Centre the container on the page.
+
+		@include clearfix; // Likely to contain floated elements i.e. columns
+
+		& > header {
+			@include breakpoint( $tablet ) {
+				@include add-grid(24);
+				@include clearfix;
+				text-align: center;
+			}
+			> .intro {
+				font-size: 1.25rem;
+				margin-bottom: 3rem;
+				@include breakpoint( $tablet ) {
+					@include grid-span(16, 5);
+				}				
+			}
+		}
+
+		.intro, .outro {
+			// font-size: 1.25rem;
+			@include breakpoint( $tablet ) {
+				@include grid-span(16, 5);
+				text-align: center;
+			}
+		}
+
+		.intro {
+			margin-bottom: 3em;
+		}
+
+		.outro {
+			margin-top: 3em;
+		}
+
+		#section-icon {margin-bottom: 3em;}
+
+
+		& > footer {
+			.read-more {
+				text-align: right;
+				&.read-more--cta {
+					padding-top: 2em;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+}
+
+/* Right sidebar */
+
+.right-sidebar #primary {
+	@include breakpoint($tablet) {
+		float: left;
+		margin: 0 -25% 0 0;
+	}
+	width: 100%;
+}
+
+.right-sidebar .site-main {
+	@include breakpoint($tablet) {
+		margin: 0 25% 0 0;
+	}
+}
+
+.right-sidebar .site-content .widget-area {
+	@include breakpoint($tablet) {
+		float: right;
+		overflow: hidden;
+		width: 25%;
+	}
+}
+
+/* Left sidebar */
+
+.left-sidebar #primary {
+	width: 100%;
+	@include breakpoint($tablet) {
+		float: left;
+		margin: 0 -100% 0 0;
+	}
+}
+
+.left-sidebar .site-main {
+	@include breakpoint($tablet) {
+		margin-left: 25%;
+	}
+}
+
+.left-sidebar .site-content .widget-area {
+	@include breakpoint($tablet) {
+		float: left;
+		overflow: hidden;
+		width: 25%;
+	}
+}
+
+.right-sidebar
+
+/* Menu */
+
+ul.nav-menu li a {
+	padding: 5px $side-padding;
+}
+
+
+
+
+/* Search */
+
+input[type="search"] {
+		// color:  $white; // Input color
+		background: transparent;
+   		border-width: 0;
+    	padding: $block-padding;
+	}
+
+
+::-webkit-input-placeholder {
+   color: rgba(0,0,0,.4);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}
+
+a#search-toggle {
+	float: left;
+}
+
+#work-categories {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.archive.tax-type .cover {
+	padding-bottom: 3em;
+}
+
+.home #main-navigation-menu ul,
+.home #search-toggle {
+	z-index: 2;
+}
+
+.home #main-navigation-menu > ul {
+	position: relative;
+}

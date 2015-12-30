@@ -1,0 +1,58 @@
+ul.social-media-links {
+	font-size: ms(3);
+	// display: inline-block; 
+	@extend .nobullets !optional;
+	li {
+		display: inline-block;
+		text-align: center;
+		a {
+			padding: .5rem;
+			border-bottom: none;
+			line-height: ms(3);		
+			&:link {
+				text-decoration: none;
+			}
+			&.twitter {
+				i {
+					&.fa-circle {
+						color: $twitter;
+					}
+				}
+			}
+			&.facebook {
+				i { 
+					&.fa-circle {
+						color: $facebook;
+					}
+				}
+			}
+			&.youtube {
+				i {
+					&.fa-circle {
+						color: $youtube;
+					}
+				}
+			}
+			&.instagram {
+				i {
+					&.fa-circle {
+						color: $instagram;
+					}
+				}
+			}
+			&.pinterest {
+				i {
+					&.fa-circle {
+						color: $instagram;
+					}
+				}
+			}
+		}
+	}
+}
+#social-sharing {
+	padding: 1.5em 0;
+	.social-title {
+		@extend .visuallyhidden;
+	}
+}

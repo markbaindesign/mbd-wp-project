@@ -1,0 +1,214 @@
+/* ==========================================================================
+   Header
+   ==========================================================================de */
+
+
+.site-header {
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: $grey;
+	color: $black;	
+	display: table;
+  	width: 100%;
+	margin-top: 0;
+
+	border-bottom:  1px solid $grey;
+	@include breakpoint( $tablet ){
+		width: 100%;
+	}
+	.container {
+		display: table;
+  		width: 100%;
+		// max-width: 100%;
+	}
+
+	&:fixed {
+		right: 0;
+		left: 0;
+		top: 0;	
+		z-index: 100;
+		position: fixed;
+	}
+
+	.section {
+		// Less top/bottom padding on the header .section, 
+		// but keep the side padding.
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+
+
+	a {
+		border-bottom: none;
+		white-space: nowrap;
+
+		&.toggle {
+
+		}
+	}
+}
+
+
+
+.site-branding {
+	width: 100%;
+	position: relative; // Menu toggle is position: absolute.
+	@include clearfix;
+	@extend .section;
+	padding: 5px 0;
+
+	.site-title {
+		display: block;
+		height: auto;
+		margin: 0 auto;
+		font-weight: 700;
+		&:hover {
+			
+		}
+
+		img, #logo {
+			width: 100%;
+			&.desktop-logo {
+				display: none;
+				@include breakpoint( $tablet ){
+					display: block;
+				} 
+			}
+			&.mobile-logo {
+				@include breakpoint( $tablet ){
+					display: none;
+				} 
+			}
+		}
+	}
+	@include breakpoint( $tablet ){
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0;
+		width: auto;
+		margin-bottom: 0;
+		.site-title {
+			float: none;
+			text-align: left;
+			img {
+				width: 100%;
+			}
+		}
+	} 
+
+	@include breakpoint( $tablet-horizontal ){
+		
+	} 
+}
+
+#main-nav-wrapper {
+	@include breakpoint( $tablet ) {
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+	}
+}
+
+#main-navigation-menu {
+	width: 100%;
+}
+
+
+#pre-header-search {
+	@include breakpoint($tablet){
+		display: none;
+	}
+}
+
+#nav-bar-search  {
+
+	@include breakpoint($tablet){
+		display: block;
+		float: right;
+
+		form {
+			padding: 0;
+			color: $color-text-pre-header;
+
+
+			label {
+				padding: 0;
+			}
+
+
+
+			input[type="search"] {
+				margin: 0;
+				color: $black;
+			}
+		}
+	}
+}
+
+/**
+* Hidden search bar
+*/
+
+#nav-bar-search {
+	@include breakpoint( $tablet ){
+  		z-index: 1;
+	}
+
+	input[type="search"] {
+		display: block;
+
+	}
+
+	input[type=submit] {
+		display: none;
+	}
+
+} 
+
+.js #nav-bar-search {
+	@include breakpoint( $tablet ){
+		display: none; // hide the search container  		
+	}
+	input[type=submit] {
+		display: none; // hide the submit button  
+	}
+} 
+
+.js-search-active {
+	@include breakpoint( $tablet ) {
+		#nav-bar-search {		
+			display: block; // display the search container
+	  		@include transition(all, 0.3s, ease-in-out); 
+	  		position: absolute;
+	  		right: 0;
+	  		bottom: 0;
+	  		z-index: 1;
+	  		padding: 0;
+	 		@include transition(all, 0.3s, ease-in-out);
+	 		input[type=search] {
+				background-color: $white; 
+			}
+		}  
+	} 
+}
+
+
+
+.site-header {
+
+	@include transition(all, 0.3s, ease-in-out);
+	&.section {
+	}
+	h1 {
+		margin: 0;
+	}
+}
+
+.js-nav-active .site-header {
+ 	@include transition(all, 0.3s, ease-in-out); 	
+}
+
+.js-search-active .site-header {
+ 	@include transition(all, 0.3s, ease-in-out); 	
+}

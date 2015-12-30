@@ -1,0 +1,22 @@
+footer {
+	&.exam-result {
+		position: relative; 
+		@include circle( $icon-width-medium, $white );
+		@include border-fancy;
+		@include center-block;
+		
+		span {
+			display: block;
+			position: absolute;
+			height: $icon-width-medium/2;
+			width: $icon-width-medium/2;
+			top: 50%;
+			left: 50%;
+			padding: 0; 
+			margin-top: -$icon-width-medium/4;
+			margin-left: -$icon-width-medium/4;
+			@extend .h3;
+			color: $cerulean;
+		}
+	}
+}

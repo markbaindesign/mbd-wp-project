@@ -1,0 +1,288 @@
+/* ==========================================================================
+   Border-box all the things!
+   ========================================================================== */
+
+*,
+:before,
+:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   General
+   ========================================================================== */
+html {
+	line-height: 1.5;
+}
+
+body {
+	color: $color_text;
+	background-color: $white;
+	text-align: center;
+	@include breakpoint( $tablet ) {
+		text-align: left;
+	}
+}
+
+::-moz-selection {
+	background: $color_text-selection;
+}
+
+::selection {
+	background: $color_text-selection;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+	border-bottom: 1px solid $color_text-anchor;
+	text-decoration: none;
+	@include transition(all, 0.3s, ease-in-out);
+	&:link {
+		color: $color_text-anchor;
+		@include transition(all, 0.3s, ease-in-out);
+	}
+	&:visited {
+		color: $color_text-anchor;
+		@include transition(all, 0.3s, ease-in-out);
+	}
+	&:hover {
+		color: $color_text-anchor-hover;
+		border-bottom: 1px solid $color_text-anchor-hover;
+		@include transition(all, 0.3s, ease-in-out);
+	}
+}
+
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	margin: 0 auto;
+	padding: 0;
+	
+	@include breakpoint( $mobile-horizontal ) {
+		width: auto;
+	}
+
+	// Floating images on small screens doesn't generally look good, so enable it only at higher widths.
+	
+	&.alignleft,
+	&.alignright, 
+	&.aligncenter {
+		float: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.alignleft {
+		@include breakpoint( $mobile-horizontal ) {
+			display: inline;
+			float: left;
+			margin-right: 1.5em;
+		}
+	}
+	&.alignright {
+		@include breakpoint( $mobile-horizontal ) {
+			display: inline;
+			float: right;
+			margin-left: 1.5em;
+		}
+	}
+	&.aligncenter {
+		@include breakpoint( $mobile-horizontal ) {
+			clear: both;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+
+
+p {
+	margin: 0 0 1em 0; // Browser will set "margin-before", so be explicit!
+}
+
+blockquote {
+	@extend .h4 !optional;
+	font-weight: 500;
+	margin: 0 0 2em 0;
+	// font-style: italic;
+	position: relative;
+	&:before {
+		@extend .h1;
+		content: '';
+		line-height: 1;
+		position: absolute;
+		text-align: center;
+		left: -9px; /* Hand made :) */
+		width: 100%;
+		@include breakpoint( $tablet ){
+			position: relative;
+			padding: 0;
+			font-family: sans-serif;
+			font-style: normal;
+			font-size: 8em;
+			height: 40px;
+			overflow: hidden;
+		}
+	}
+
+	p {
+		@include breakpoint( $tablet ){
+		}
+	}
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+.amp {
+	font-family: Baskerville, Palatino, "Book Antiqua", sans-serif;
+	font-style: italic;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	
+	&.nobullets { // to be used as @extend
+		margin: 0; 
+		padding: 0;
+		list-style-type: none;
+	}
+
+	&.icon-list {
+		@extend .nobullets;
+		li {
+			padding-left: 1.3em;
+			&::before {
+				font-family: 'FontAwesome';
+				margin-left: -1.3em;
+				width: 1.3em;
+				color: $cerulean;
+				display: inline-block;
+			}
+		}
+
+		&.icon-list--fa-check li::before { content: '\f00c'; } // fa-check		
+		&.icon-list--fa-check-circle li::before { content: '\f058'; } // fa-check-circle	
+
+	}
+}
+	
+
+/* ==========================================================================
+   Alignment
+   ========================================================================== */
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+
+/* ==========================================================================
+   Accessiblity
+   ========================================================================== */
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* ==========================================================================
+   Clearings
+   ========================================================================== */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+
+/* ==========================================================================
+   Infinite Scroll
+   ========================================================================== */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+label {
+	@extend .meta; 
+	padding-bottom: 5px;
+	font-family: $alt2-font-stack;
+	font-style: normal;
+}

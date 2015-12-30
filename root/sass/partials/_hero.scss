@@ -1,0 +1,99 @@
+#hero {
+	@include breakpoint( max-width 768px ) { // We need to target small devices
+		&[style] { // https://css-tricks.com/override-inline-styles-with-css/
+			background-image: none !important;
+		}
+	}
+	@include breakpoint( $tablet ){
+		background-size: cover;
+		background-repeat: repeat;
+		background-position: center center;
+		background-size: cover;
+		@include add-grid(24 at 480px);
+		@include add-gutter(1/3);
+	} 
+	.container {
+		background: transparent;
+		@include breakpoint($tablet) {
+			// background: url('assets/images/hero-background.jpg') no-repeat bottom right;
+		}
+		.content {		
+			display: block;
+			span { // Contains the content 
+				@include breakpoint( $tablet ) {
+					height: 100%;
+				}
+			}
+			h1 {
+				@extend %padded-multiline;
+				line-height: 1.8;
+			}
+			@include breakpoint( $tablet ) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				height: 100%;
+			}
+		}
+	}
+
+
+
+	.hero-image {
+		display: none;
+		margin: 0 auto;
+		padding: 0;
+		@include breakpoint( $tablet ) {
+			display: block;
+			width: 30%;
+		}
+
+	}
+	.hero-text {
+
+		padding-top: 1em;
+		@include breakpoint( $tablet ) {
+			width: 50%;
+			margin: 0 auto;
+			
+		}
+
+	}
+
+	a {
+		border-bottom: none;
+	}
+}
+
+// Modifications to the basic hero module for the home page
+
+.home .hero {
+
+	// Headers & typography
+
+
+
+	.hero-cta {
+				a {
+					padding: 1em; // Extra pad for bigness!
+				}
+		@include clearfix;
+		@include breakpoint($mobile-horizontal){
+			margin-bottom: 1em;
+		}
+		@include breakpoint($tablet){
+			margin-bottom: 2em;
+		}
+
+	}
+	#lead {
+		@include breakpoint($tablet){
+			margin-bottom: 2em;
+		}
+	}
+}
+
+
+
