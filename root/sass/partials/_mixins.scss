@@ -367,3 +367,12 @@
      -moz-border-radius: $width/2;
           border-radius: $width/2;
 }
+
+// Font-awesome colored circle backgrounds
+@mixin fa-colored-circle($color) {
+  i { 
+		&.fa-circle {
+			color: $color;
+		}
+	}
+}

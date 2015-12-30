@@ -12,44 +12,17 @@ ul.social-media-links {
 			&:link {
 				text-decoration: none;
 			}
-			&.twitter {
-				i {
-					&.fa-circle {
-						color: $twitter;
-					}
-				}
-			}
-			&.facebook {
-				i { 
-					&.fa-circle {
-						color: $facebook;
-					}
-				}
-			}
-			&.youtube {
-				i {
-					&.fa-circle {
-						color: $youtube;
-					}
-				}
-			}
-			&.instagram {
-				i {
-					&.fa-circle {
-						color: $instagram;
-					}
-				}
-			}
-			&.pinterest {
-				i {
-					&.fa-circle {
-						color: $instagram;
-					}
-				}
-			}
+			&.twitter { @include fa-colored-circle($twitter); }
+			&.facebook { @include fa-colored-circle($facebook); }
+			&.youtube { @include fa-colored-circle($youtube); }
+			&.instagram { @include fa-colored-circle($instagram); }
+			&.pinterest { @include fa-colored-circle($pinterest); }
 		}
 	}
 }
+
+// Social icons with colored background
+
 #social-sharing {
 	padding: 1.5em 0;
 	.social-title {
