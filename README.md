@@ -14,6 +14,7 @@
 - Edit `bower.json`with your new project details
 - Edit `package.json`with your new project details
 - Rename and edit `PROJECT_NAME.subline-project`with your new project details
+- Edit `README.md`with your new project title
 
 ### Set up Git
 
