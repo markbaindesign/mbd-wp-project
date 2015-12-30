@@ -1,0 +1,142 @@
+.twitter-feed {
+	a {
+		border-bottom: none;
+	}
+
+	#twitter-avatar {
+		width: 21%;
+		@include center-block;		
+		@include breakpoint( $tablet ){
+			float: left;
+			width: 12.5%;
+			margin-right: 10%;
+		}
+
+		img {
+			width: 100%;
+			@include border-radius( 50% );
+		}
+	}
+
+	.a-tweet {
+		@include clearfix;
+		margin: 0;
+		padding: 0;
+	}
+
+	p {
+		margin: 0 0 1em 0;
+		width: 100%;
+		opacity: .73;
+		@include breakpoint( $tablet-horizontal ){
+			float: left;
+			text-align: left;
+			width: 50%;
+		}
+
+		&.tweet {
+			opacity: .9;
+			// font-style: italic;
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+
+		&.timePosted {
+			&:before {
+				font-family: 'FontAwesome';
+				content: '\f017\0020'; // Clock/NBSP
+			}
+		}
+
+		// Reply, retweet & favorite
+		&.interact {
+			@include breakpoint( $tablet-horizontal ){
+				text-align: right;
+			}
+			a {
+				padding: 15px;
+				text-decoration: none;
+				opacity: .6;
+				@include breakpoint( $tablet ) {
+					padding: 15px 15px 15px 0; 
+				}				
+				&:hover {
+					opacity: 1;
+				}
+
+				&:before {font-family: 'FontAwesome'; }
+				&.twitter_reply_icon:before { content: '\f112' ; }
+				&.twitter_retweet_icon:before {	content: '\f079' ;	}
+				&.twitter_fav_icon:before {	content: '\f005' ;	}
+
+				span {
+					@extend .visuallyhidden;
+				}						
+			}
+		}		
+
+	}
+}
+
+ul.tweet-list {
+	@include clearfix;
+	@extend .nobullets !optional;
+	@include breakpoint( $tablet-horizontal ) {
+		@include add-grid(24);
+	}
+	li { 
+		margin-bottom: 1.5rem;
+		padding: 1.5rem 3%;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		overflow: hidden; // Prevent links from overflowing box
+		@include breakpoint( $tablet ) {
+		 	border: none; // Remove border from last list item
+		 	padding-left: 0;
+		 	padding-right: 0;
+		 	&:nth-of-type(3n+1) { @include grid-span(8, 1);	} // Change layout to 3 columns
+		 	&:nth-of-type(3n+2) { @include grid-span(8, 9);	}
+		 	&:nth-of-type(3n+3) { @include grid-span(8, 17); }
+		 } 
+		&:last-of-type {
+			border: none; // Remove border from last list item
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+	}
+
+
+
+
+}
+
+// Sidebar layout
+.sidebar-twitter-feed {
+	ul.tweet-list {
+		// At this BP, layout with sidebar, so...
+		// single column layout is required.
+		@include breakpoint( $tablet ) {
+			li {
+				// overflow: auto;
+				&:nth-of-type(3n+1),
+				&:nth-of-type(3n+2),
+				&:nth-of-type(3n+3) {
+					float: none;
+					width: 100%;
+					margin: 0 0 1.5rem 0;
+				}
+			}
+			p {
+				margin-bottom: 5px;
+				float: none;
+				width: 100%;
+				&.interact {
+					text-align: left;
+				}
+			}			
+			a {
+				margin: 0 10px 0 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,190 @@
+/* ==========================================================================
+Layout
+========================================================================== */
+
+html, 
+body,
+#page {
+	height: 100%; /* Important for sticky footer */
+}
+
+.section {
+	width: 100%;
+	padding: 0;
+	@include breakpoint($tablet) {
+		padding: 3em 3%;
+	}
+
+
+
+}
+
+.container {
+	position: relative; // Allow absolute positioning of elements
+	max-width: $container-width;
+	padding: 3em 5%;
+	margin: 0 auto; // Centre the container on the page.
+	@include clearfix; // Likely to contain floated elements i.e. columns
+	@include breakpoint($tablet) {
+		padding: 0;
+	}
+
+
+}
+
+/* Sidebars */
+
+.right-sidebar, .left-sidebar {
+	#main {
+		@include clearfix;
+		@include add-grid(24 at 480px);
+		@include add-gutter(1/3);
+		margin: 0 auto;
+		padding: 0;
+		@include breakpoint( $tablet ){
+			padding: 3em 3%;
+		}
+	}
+}
+
+/* Right sidebar */
+
+.right-sidebar {
+	#primary {
+		width: 100%;
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		@include breakpoint($tablet) {
+			float: left;
+			margin: 0 -25% 0 0;
+			padding: 0;
+			border: none;
+			.content-container {
+				margin-right: 25%;
+				padding-right: 3%;
+			}
+		}
+	}
+	#secondary {
+
+		@include breakpoint($tablet) {
+			width: 25%;
+			float: right;
+			padding: 0;
+		}
+
+		.container {
+			padding: 0;
+		}
+	}
+}
+
+/* Left sidebar */
+
+.left-sidebar #primary {
+	width: 100%;
+	@include breakpoint($tablet) {
+		float: left;
+		margin: 0 -100% 0 0;
+	}
+}
+
+.left-sidebar .site-main {
+	@include breakpoint($tablet) {
+		margin-left: 25%;
+	}
+}
+
+.left-sidebar #secondary {
+	@include breakpoint($tablet) {
+		float: left;
+		overflow: hidden;
+		width: 25%;
+	}
+}
+
+
+/* Menu */
+
+ul.nav-menu li a {
+	padding: 5px $side-padding;
+	
+}
+
+
+
+
+/* Search */
+
+input[type="search"] {
+	background-image: $svg-bg;
+	background-repeat: repeat;
+	border-width: 0;
+	padding: 1em;
+	margin-bottom: 1rem;
+}
+
+
+// Placeholders
+::-webkit-input-placeholder {
+	color: rgba(0,0,0,.4);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: rgba(0,0,0,.4);  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: rgba(0,0,0,.4); 
+}
+
+:-ms-input-placeholder {  
+	color: rgba(0,0,0,.4); 
+}
+
+a#search-toggle {
+	float: left;
+}
+
+/* Right sidebar */
+
+.media_block {
+	@include clearfix;
+	.media_block-text {
+		width: 100%;
+		@include breakpoint($tablet) {
+
+		}
+
+	}
+	.media_block-image {
+		text-align: center;
+		@include breakpoint($tablet) {
+
+		}
+		img {
+			margin-bottom: 1em;
+			max-width: 66px;
+		}
+	}
+}
+
+#featured-post {
+
+	// Remove bottom padding on feature post section to match the masonry grid padding
+	&.section {
+		@extend %remove-top-bottom-padding;
+	}
+}
+
+.non-featured-posts {
+	// Also remove top padding from the following section
+	&.section {
+		padding-top: 0;
+
+		// Add padding to the contain to match the padding between the masonry grid items
+		.container {
+			margin-top: 0.7%;
+		}
+	}
+}

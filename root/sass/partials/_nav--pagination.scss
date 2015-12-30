@@ -1,0 +1,6 @@
+#paging-navigation {
+	background-color: lighten( $grey, 3% );
+	.nav-links {
+		@include clearfix;
+	}
+}

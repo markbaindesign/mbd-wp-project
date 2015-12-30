@@ -1,0 +1,52 @@
+.column-container {
+	@include add-grid(24);
+	@include add-gutter(2);
+
+	&.column-container-two {
+
+		.primary-content-block {
+			@include breakpoint( $mobile-horizontal ) {
+				@include grid-span(12, 1);
+			}
+		}
+
+		.secondary-content-block {
+			@include breakpoint( $mobile-horizontal ) {
+				@include grid-span(12, 13);
+			}
+
+		}
+	}
+
+	&.column-container-three {
+
+		.primary-content-block {
+			@include breakpoint( $mobile-horizontal ) {
+				@include grid-span(12, 1);
+			}
+			@include breakpoint( $tablet ) {
+				@include grid-span(8, 1);
+			}
+		}
+
+		.secondary-content-block {
+			@include breakpoint( $mobile-horizontal ) {
+				@include grid-span(12, 13);
+			}
+			@include breakpoint( $tablet ) {
+				@include grid-span(8, 9);
+			}
+
+		}
+
+		.tertiary-content-block {
+			@include breakpoint( $mobile-horizontal ) {
+				@include isolation-span(12, 13, 'right');
+			}
+			@include breakpoint( $tablet ) {
+				@include grid-span(8, 17);
+			}
+		}
+	}
+
+}

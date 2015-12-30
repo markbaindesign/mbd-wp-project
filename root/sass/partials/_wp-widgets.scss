@@ -1,0 +1,57 @@
+// Widget Area
+
+#widget-area {
+	@extend .font_small !optional;
+	@include clearfix;
+	li {
+		padding-bottom: .5em;
+	}
+	h4 {
+		font-size: 2em;
+	}
+	.container {
+		padding-bottom: 0;
+	}
+	@include breakpoint($tablet) {
+
+		li {
+			padding-bottom: 0;
+		}
+		h4 {
+			font-size: 1.6em;
+		}
+		&.two {
+			.widget-container {
+				@include grid-span(12, 1);
+			}
+			.widget-container + .widget-container {
+				@include grid-span(12, 13);
+			}
+		}
+		&.three {
+			.widget-container {
+				@include grid-span(8, 1);
+			}
+			.widget-container + .widget-container {
+				@include grid-span(8, 9);
+			}
+			.widget-container + .widget-container + .widget-container {
+				@include grid-span(8, 17);
+			}
+		}
+	}
+
+
+}
+
+.widget-container {
+	.widget {
+		margin: 0 0 2em 0;
+		ul {
+			@extend %no-bullets;
+			li {
+				margin-bottom: 1em;
+			}
+		}
+	}
+}

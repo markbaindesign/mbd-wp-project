@@ -1,0 +1,85 @@
+.image-grid {
+	ul {
+		@extend .nobullets;
+		@include add-grid(24);
+		@include sgs-change('output', 'float');		
+		@include add-gutter(2);		
+
+		li {
+			margin-bottom: 1rem;
+
+			&:nth-of-type(3n+1) {
+				@include grid-span(8, 1);
+			}
+			&:nth-of-type(3n+2) {
+				@include grid-span(8, 9);
+			}
+			&:nth-of-type(3n+3) {
+				@include grid-span(8, 17);
+			}
+
+			@include breakpoint( $mobile-horizontal ) {
+				&:nth-of-type(4n+1) {
+					@include grid-span(6, 1);
+				}
+				&:nth-of-type(4n+2) {
+					@include grid-span(6, 7);
+				}
+				&:nth-of-type(4n+3) {
+					@include grid-span(6, 13);
+				}
+				&:nth-of-type(4n+4) {
+					@include grid-span(6, 19);
+				}
+			}
+
+			@include breakpoint( $tablet ) {
+				&:nth-of-type(6n+1) {
+					@include grid-span(4, 1);
+				}
+				&:nth-of-type(6n+2) {
+					@include grid-span(4, 5);
+				}
+				&:nth-of-type(6n+3) {
+					@include grid-span(4, 9);
+				}
+				&:nth-of-type(6n+4) {
+					@include grid-span(4, 13);
+				}
+				&:nth-of-type(6n+5) {
+					@include grid-span(4, 17);
+				}
+				&:nth-of-type(6n+6) {
+					@include grid-span(4, 21);
+				}			
+			}
+		}
+	}
+}
+
+//  Image Layouts
+
+img[class*='size-'] {
+	margin-bottom: 1.953125%;
+}
+
+.size-sq3 {
+	float: left;
+	width: 32.03125%;
+	margin-right: 1.953125%;
+}
+
+.size-rec {
+	float: left;
+	width: 66.015625%;
+	margin-right: 1.953125%;
+}
+
+.size-letterbox {
+	width: 100%;
+	margin-right: 0;
+}
+
+img.last {
+	margin-right: 0;
+}
