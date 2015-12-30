@@ -1,1 +1,79 @@
+# =========================
+# Various
+# =========================
+node_modules
+bower_components
+.sass-cache
+import
+export
+scripts
+release
+
+# =========================
+# VIM Temp Files
+# =========================
+*~
+*.swp
+
+# =========================
+# WordPress 
+# =========================
+
+*.log
+
+# Ignore everything in the "httpdocs" directory except the "wp-content" directory.
+root/httpdocs/*
+!root/httpdocs/wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+root/httpdocs/wp-content/*
+!root/httpdocs/wp-content/plugins/
+!root/httpdocs/wp-content/themes/
+!root/httpdocs/wp-content/mu-plugins/
+ 
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+root/httpdocs/wp-content/plugins/*
+!root/httpdocs/wp-content/plugins/PROJECT_NAME-custom-functions/
+
+# Ignore everything in the "mu-plugins" directory, except the mu-plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+root/httpdocs/wp-content/mu-plugins/*
+!root/httpdocs/wp-content/mu-plugins/load.php
+ 
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+root/httpdocs/wp-content/themes/*
+!root/httpdocs/wp-content/themes/PROJECT_NAME/
+
+# =========================
+# Operating System Files
+# =========================
+
+# Windows
+# =========================
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+*.map
+
+# Misc
+*.zip
+*.tar
+*.gz
+*.sql
 *.sublime-workspace
