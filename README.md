@@ -1,78 +1,24 @@
-# MBD Project
+# MBD Project Scaffolding
 
 ## By Mark Bain Design
 
-### Version 1.1.0
+### Version 1.1.1
 
-# WP Project setup checklist #
+## Using the WP project scaffolding to start a new WP project ##
 
-## Staging server ##
-- [X] Configure sub-domain 
-- [X] Configure database
+### Initial setup
 
-## Local environment ##
-- [x] Configure hosts
+- Download the zipfile
+- Copy the content of `root`to the root folder of your new project
+- Edit `.gitignore`with your new project details
+- Edit `bower.json`with your new project details
+- Edit `package.json`with your new project details
+- Rename and edit `PROJECT_NAME.subline-project`with your new project details
 
-### Install WordPress ###
-- [x] In /htdocs, `git clone https://github.com/WordPress/WordPress.git NEW_PROJECT-NAME/httpdocs` 
-- [x] Delete .git
-- [x] wp-config.php `git clone https://gist.github.com/4e216af02104e87f6b7a.git`
-- [x] [Get salts](https://api.wordpress.org/secret-key/1.1/salt/)
-- [x] Go to URL and follow setup procedure
+### Set up Git
 
-### Install deploy scripts ###
-*Do not commit `config.sh`to your repo!*
-- [ ] `git clone https://github.com/markbaindesign/mbd-wp-deploy-scripts.git NEW_PROJECT-NAME/scripts` 
-- [ ] `cd NEW_PROJECT-NAME`
-- [ ] `mkdir import`
-- [ ] `mkdir export`
-- [ ] `cp config-sample.sh config.sh`
-- [ ] Edit `config.sh`with your project's environmental variables
+- CD into the new project root directory and run `git init`to create an empty git repo.
 
-### Git ###
-- [ ] Gitignore: `git clone https://gist.github.com/b41e14fc9fc40f578a6d.git`
+### Set up the new project
 
-### Various ###
-
-#### Sublime ####
-
-- [ ] `git clone https://gist.github.com/81ad104299df655284b7.git`
-
-#### Grunt ####
-- [x] Edit `Gruntfile.js`
-
-#### npm ####
-- [x] Run `npm install`
-
-#### Bower ####
-_[Bower](http://bower.io/) is a package manager for the web._
-- [x] Edit `bower.json`with your project name and dependencies
-- [ ] Run `bower install`
-- [ ] Run `grunt copyassets`
-
-- [ ] [Install theme boilerplate](https://github.com/markbaindesign/mbd-grunt-wp-theme/blob/dev/README.md)
-- [ ] Configure sub-domain
-- [ ] Configure sub-domain
-- [ ] Configure sub-domain
-- [ ] Configure sub-domain
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- Set up dev environment
-
-- [ ]set up hide-my-site plugin (customise if required)
-- [ ]set discourage search engines
-[ ]Add salts to wp-config.php
-[ ]Set up 
-[ ]Set up & test deploy scripts
-[ ]Export local site 
-
-[ ]Get access to server FTP/database
-[ ]Get access to hosting panel
-[ ]Access to domain registrar
-[ ]MailChimp
+- Visit the `README.md`of your new project for further instructions.
