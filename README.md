@@ -10,12 +10,12 @@
 
 - Download the zipfile
 - Copy the content of `root`to the root folder of your new project
-- Edit `.gitignore`with your new project details
 - Edit `bower.json`with your new project details
 - Edit `package.json`with your new project details
 - Rename and edit `PROJECT_NAME.subline-project`with your new project details
 - Edit `README.md`with your new project title
 - Edit `/sass/styles.scss`with your new theme title
+- Rename `root/.gitignore-root`to `.gitignore` and edit with your new project details
 
 ### Set up Git
 
