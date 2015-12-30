@@ -10,4 +10,74 @@
 	Domain Path: /languages/
 */
 
+// ## Simple project structure
+// ### Use a single file for all your Sass!
 // @import "main";
+
+// # Otherwise...
+
+// One file to rule them all! All imports go here.
+@import "partials/variables"; 
+
+// External libraries
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+@import "../bower_components/singularity/stylesheets/singularitygs";
+@import "../bower_components/modular-scale/stylesheets/modular-scale";
+@import "../bower_components/fontawesome/scss/font-awesome";
+@import "partials/lib/animate";
+@import "partials/lib/social-colors";
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,400italic|PT+Mono");
+
+// Load first
+	
+@import "partials/mixins"; 			
+@import "partials/helpers";			
+@import "partials/normalize";		
+@import "partials/h5bp-global";		
+@import "partials/functions"; 
+
+@import "partials/layouts";
+@import "partials/layouts--base";
+@import "partials/layouts--image-grid";
+
+// Load the rest
+@import "partials/buttons";
+@import "partials/color-schemes";
+@import "partials/cover";
+// @import "partials/cover--full-bleed";
+// @import "partials/cover--overlay-content";
+@import "partials/featured-content";
+@import "partials/flexslider";
+@import "partials/flexslider-mods";
+@import "partials/fonts";
+@import "partials/footer";
+@import "partials/forms";
+@import "partials/functions";
+@import "partials/general";
+@import "partials/header";
+@import "partials/header--headroom";
+@import "partials/header--preheader";
+@import "partials/hero";
+@import "partials/icons";
+@import "partials/latest-posts";
+@import "partials/layouts--masonry";
+@import "partials/layouts--two-cols";
+@import "partials/media-object";
+@import "partials/menus";
+@import "partials/nav--pagination";
+@import "partials/nav--responsive";
+@import "partials/page--blog";
+@import "partials/page--home";
+@import "partials/page--post";
+@import "partials/print";
+@import "partials/quotes";
+@import "partials/social";
+@import "partials/svgicons";
+@import "partials/tables";
+@import "partials/tests";
+@import "partials/twitter-feed";
+@import "partials/wp";
+@import "partials/wp-comments";
+@import "partials/wp-plugins--cf7";
+@import "partials/wp-plugins--wp-paginate";
+@import "partials/wp-widgets";
