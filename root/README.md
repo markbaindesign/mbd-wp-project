@@ -19,7 +19,7 @@
 
 ### Scripts
 
-This project comes with a set of shell scripts to aid with deployment. These scripts can either be run manually, or via grunt tasks:
+This project comes with a set of shell scripts to aid with deployment, [markbaindesign/mbd-wp-deploy-scripts]. These scripts can either be run manually, or via grunt tasks. For configuration instructions, see [mbd-wp-deploy-scripts/scripts/README.md]. 
 
 - Run `grunt import`to run the import script and install the archive currently in `/import`to your local environment.
 - Run `grunt export`to run the export script which creates an archive of your local install in `/export`, ready to upload to your remote environment (staging/production).
@@ -30,3 +30,5 @@ Once you have run the import script, you need to change all the URLs in the data
 
 [NPM]: https://www.npmjs.com/
 [interconnectit/Search-Replace-DB]: https://github.com/interconnectit/Search-Replace-DB
+[markbaindesign/mbd-wp-deploy-scripts]: https://github.com/markbaindesign/mbd-wp-deploy-scripts
+[mbd-wp-deploy-scripts/scripts/README.md]: https://github.com/markbaindesign/mbd-wp-deploy-scripts/blob/master/scripts/README.md
